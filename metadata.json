@@ -1,0 +1,6 @@
+{
+  "name": "教师在线课表管理系统",
+  "description": "专为教师打造的多班级课程管理、颜色标记、课表打印与移动端查看系统",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
