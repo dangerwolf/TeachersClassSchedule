@@ -203,7 +203,7 @@ export default function App() {
                   </button>
                 )}
                 <span className="text-slate-500">
-                  当前排课: <strong className="text-slate-900 font-bold">{lessons.length}</strong> 节 / 周
+                  当前排课: <strong className="text-slate-900 font-bold">{lessons.reduce((sum, l) => sum + (l.durationSlots || 1), 0)}</strong> 学时 / 周 (共 {lessons.length} 门)
                 </span>
               </div>
             </div>
@@ -214,6 +214,7 @@ export default function App() {
               classes={classes}
               timeSlots={timeSlots}
               config={config}
+              onConfigChange={setConfig}
               selectedClassId={selectedClassId}
               onAddLessonAt={(day, slotId) => handleOpenAddLesson(day, slotId)}
               onEditLesson={handleOpenEditLesson}
@@ -227,6 +228,7 @@ export default function App() {
             lessons={lessons}
             classes={classes}
             timeSlots={timeSlots}
+            config={config}
             onEditLesson={handleOpenEditLesson}
             onAddLessonAt={(day, slotId) => handleOpenAddLesson(day, slotId)}
           />
@@ -237,6 +239,7 @@ export default function App() {
             lessons={lessons}
             classes={classes}
             timeSlots={timeSlots}
+            config={config}
             onAddLesson={() => handleOpenAddLesson()}
             onEditLesson={handleOpenEditLesson}
             onDeleteLesson={handleDeleteLesson}
@@ -249,6 +252,7 @@ export default function App() {
             classes={classes}
             timeSlots={timeSlots}
             profile={profile}
+            config={config}
           />
         )}
       </main>

@@ -1,6 +1,6 @@
 {
   "name": "教师在线课表管理系统",
-  "description": "专为教师打造的多班级课程管理、颜色标记、课表打印与移动端查看系统",
+  "description": "专为高校及中小学教师打造的多班级课程管理、单双周及1-10周等周次范围定制、多节连堂大课排课、颜色标记、数据导入导出、在线打印与移动端自适应系统",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
